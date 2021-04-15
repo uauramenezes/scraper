@@ -1,3 +1,6 @@
+# A scraper to get games prices from Steam and show it
+# Must have BeautifulSoup and tkinter installed
+
 from bs4 import BeautifulSoup as bs
 import tkinter as tk
 import requests
@@ -25,7 +28,6 @@ for i in range(len(games)):
     price = soup.find("div", {"class": "discount_final_price"}).get_text().strip()
 
   games[i]['price'] = price
-
 
 
 window = tk.Tk()
